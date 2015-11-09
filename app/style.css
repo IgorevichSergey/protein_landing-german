@@ -1,0 +1,119 @@
+/*--- MAIN CLASSES ---*/
+body{
+    background-color: #999999;
+}
+.container{
+    background-color: white;
+    padding:0;
+}
+.float-cleaner{
+    clear: both;
+}
+.right-side{
+    margin: 0;
+    width: 50%;
+    float: right;
+}
+.left-side{
+    margin: 0;
+    width: 50%;
+    float: left;
+}
+/*--- HEADER ---*/
+.page-header-block{
+    background: url(../images/header.png) no-repeat;
+    background-size: cover;
+    height:277px;
+}
+/*--- SUB-HEADER CLASS ---*/
+.sub-header-block{
+    background-color: black;
+}
+.sub-header-element{
+    float: left;
+    width: 33%;
+    padding: 15px;
+}
+.sub-header-element h4{
+    margin-bottom: 0;
+    color: #008197;
+}
+.sub-header-element p{
+    color: #77807A;
+}
+/*--- MAIN CONTENT ---*/
+.content h3{
+    color: #36393E;
+    text-align: center;
+}
+.content h4{
+    color:#00B1E6;
+}
+.content p{
+    color:#595946;
+}
+.content .left-side,
+.content .right-side{
+    padding:10px;
+}
+.content img{
+    width: 100%;
+}
+/*--- CONTENT FIRST BLOCK ---*/
+
+
+/*--- CONTENT FOURTH (4TH) BLOCK ---*/
+.content .gallery-block{
+    margin:10px;
+}
+
+/*--- FOOTER ---*/
+.footer-block{
+    background-color: black;
+}
+.footer-block .footer-left-side{
+    margin:0;
+    padding:15px;
+    width:35%;
+    float:left;
+}
+.footer-block .footer-right-side{
+    margin:0;
+    padding:15px;
+    width:65%;
+    float:right;
+}
+.footer-block .footer-line-block{
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: #01B1E3;
+    color:white;
+}
+.footer-block .footer-line-block .footer-line-element{
+    margin: 0;
+    width:25%;
+    float:left;
+    font-size:22px;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px){
+
+    /*--- FOOTER ---*/
+    .footer-block .footer-line-block{
+        padding-top:0;
+    }
+    .footer-block .footer-line-block .footer-line-element{
+        width:50%;
+        padding-top: 10px;
+    }
+}
+@media screen and (max-width: 768px){
+    .sub-header-element{
+        width:100%;
+    }
+    /*--- FOOTER ---*/
+    .footer-block .footer-line-block .footer-line-element {
+        width: 100%;
+    }
+}
