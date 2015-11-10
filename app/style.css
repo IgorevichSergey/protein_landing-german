@@ -259,6 +259,95 @@ body{
         width: 100%;
     }
 }
+/*--- SECOND PAGE ---*/
+.second-page-left-side{
+    margin:0;
+    width:50%;
+    float:left;
+}
+.second-page-right-side{
+    margin:0;
+    width:50%;
+    float:right;
+}
+.right-text-align{
+    text-align: right;
+}
+.grey-block{
+    padding:0 5px 10px 10px;
+    background-color: #F6F6F6;
+    color:#606060;
+}
+.close-button{
+    cursor:pointer;
+    color:#C5C8CD;
+}
+.close-button:active{
+    color:#333333;
+}
+.block-description{
+    color:#3D3D3D;
+    font-weight:700;
+}
+.second-page-content .form-description{
+    display: inline-block;
+    width:20%;
+}
+/*--- HEADER ---*/
+.second-page{
+
+}
+.second-page-header{
+    position: relative;
+    padding:20px;
+    background-color: black;
+    color:white;
+    font-weight:700;
+    text-align: right;
+}
+.second-page-header-logo{
+    color: white;
+    float:left;
+}
+.second-page-header .blue-color{
+    color:#005F87;
+    font-weight: 500;
+}
+/*--- CONTENT ---*/
+.second-page-content{
+    padding:20px;
+}
+.second-page-content h2{
+    font-weight: 700;
+}
+.second-page-content .second-page-left-side,
+.second-page-content .second-page-right-side{
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.second-page-content .first-form{
+    padding-top:5px;
+}
+.second-page-content .first-form input[type=button]{
+    padding:2px 20px;
+    border:1px solid black;
+    border-radius:2px;
+    color:white;
+    background-color: black;
+}
+.second-page-content .second-form{
+   padding-left:9px;
+}
+.second-page-content .form-line{
+    padding:5px 0;
+}
+.second-page-content input[type=text]{
+    border:1px solid #CDCDCD;
+    padding:2px 5px;
+}
+/*.second-page-content .grey-block .first-form .form-description{*/
+    /*padding-left:5px;*/
+/*}*/
 @media screen and (max-width: 992px){
     /*--- CONTENT ---*/
     .content-form .form-button,
@@ -296,12 +385,11 @@ body{
         margin-top:0;
     }
     /*--- CONTENT SECOND BLOCK ---*/
-    .content-form .form-button{
-        width: auto;
-        text-align: left;
-    }
+    .content-form .form-button,
     .content-form .form-description{
+        width: auto;
         float:left;
+        text-align: right;
     }
     /*--- CONTENT THIRD BLOCK ---*/
     .content .third .left-side img{
