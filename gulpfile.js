@@ -5,7 +5,7 @@ var cssconcat = require('gulp-concat-css');
 var runSequence = require('run-sequence');
 var uncss = require('gulp-uncss');
 
-config = {
+var config = {
     BOWER_SCRIPTS: [
         "./bower_components/jquery/dist/jquery.min.js",
         "./bower_components/bootstrap/dist/js/bootstrap.min.js"
@@ -56,10 +56,8 @@ gulp.task('build', function(){
 
 gulp.task('watch', function () {
     gulp.watch([
-        './app/*.js',
-        './app/**/*.js',
-        './app/**/*.html',
-        './app/**/*.css'
+        './app/index.html',
+        './app/style.css'
     ], ['build']);
 });
 gulp.task('connect', function(){
