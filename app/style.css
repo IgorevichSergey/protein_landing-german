@@ -24,9 +24,34 @@ body{
 }
 /*--- HEADER ---*/
 .page-header-block{
+    position:relative;
     background: url(../images/header.png) no-repeat;
     background-size: cover;
-    height:277px;
+    height:434px;
+}
+.page-header-block .header-button-block{
+    position:absolute;
+    bottom:50px;
+    left:50px;
+}
+.page-header-block .header-button-block a{
+    font-size:23px;
+    text-decoration: none;
+    color:white;
+    border:2px solid white;
+    padding:10px 20px;
+    background-color: black;
+}
+.page-header-block .header-button-block .header-price{
+    padding-bottom: 10px;
+    color: white;
+    font-size: 50px;
+    font-weight:bold;
+}
+.page-header-block .header-button-block .header-description{
+    padding-top: 10px;
+    font-size: 10px;
+    color:white;
 }
 /*--- SUB-HEADER CLASS ---*/
 .sub-header-block{
@@ -282,8 +307,11 @@ body{
     cursor:pointer;
     color:#C5C8CD;
 }
-.close-button:active{
+.close-button:hover{
     color:#333333;
+}
+.close-button:active{
+    color: #7c0d0e;
 }
 .block-description{
     color:#3D3D3D;
@@ -291,6 +319,7 @@ body{
 }
 .second-page-content .form-description{
     display: inline-block;
+    min-width:125px;
     width:20%;
 }
 /*--- HEADER ---*/
@@ -345,9 +374,57 @@ body{
     border:1px solid #CDCDCD;
     padding:2px 5px;
 }
-/*.second-page-content .grey-block .first-form .form-description{*/
-    /*padding-left:5px;*/
-/*}*/
+.second-page-content .submit-block .summ,
+.second-page-content .submit-block .amount{
+    color:#3D3D3D;
+    font-weight: 900;
+}
+.second-page-content .submit-block .amount{
+    padding-left:10px;
+    padding-right:20px;
+}
+.second-page-content .submit-block input[type=submit]{
+    padding: 5px 50px;
+    color: white;
+    font-weight: 900;
+    background: #01B1E3;
+    border: 1px solid #01B1E3;
+    border-radius: 3px;
+}
+.second-page-content .submit-block .submit-description{
+    color:#3D3D3D;
+    font-size:12px;
+    padding:10px 0;
+}
+.second-page-footer{
+    background-color: black;
+    padding: 10px 10px 0 10px;
+}
+.second-page-footer .footer-left-side{
+    width:40%;
+    float:left;
+}
+.second-page-footer .footer-middle-side{
+    width:20%;
+    float:left;
+}
+.second-page-footer .footer-right-side{
+    width:40%;
+    float:left;
+}
+.second-page-footer .footer-block-description{
+    font-weight:900;
+    color:white;
+    font-size:18px;
+}
+.second-page-footer .footer-left-side p{
+    color: #bbbbbb;
+    padding: 2px 10px;
+    font-size: 15px;
+}
+.second-page-footer .footer-middle-side a{
+    text-decoration: none;
+}
 @media screen and (max-width: 992px){
     /*--- CONTENT ---*/
     .content-form .form-button,
@@ -380,6 +457,10 @@ body{
     }
 }
 @media screen and (max-width: 768px){
+    /*--- HEADER ---*/
+    .page-header-block{
+        height:320px;
+    }
     /*--- CONTENT FIRST BLOCK ---*/
     .content .first .left-side img{
         margin-top:0;
@@ -427,6 +508,24 @@ body{
     .footer-block .footer-right-side {
         width: 100%;
     }
+    /*--- SECOND PAGE ---*/
+    /*--- CONTENT ---*/
+    .second-page-right-side.submit-block{
+        width:100%;
+    }
+    /*--- FOOTER ---*/
+    .second-page-footer .footer-left-side{
+        width:100%;
+    }
+    .second-page-footer .footer-middle-side{
+        padding-left:10px;
+        padding-bottom:10px;
+        width:30%;
+    }
+    .second-page-footer .footer-right-side{
+        padding-bottom:10px;
+        width:70%;
+    }
 }
 @media screen and (max-width: 420px){
     .footer-block .footer-left-side-block form input[type=number]{
@@ -437,5 +536,12 @@ body{
     .footer-block .footer-left-side-block form input[type=submit]{
         margin-top:15px;
         width: 100%;
+    }
+
+    /*--- SECOND PAGE FOOTER ---*/
+    .second-page-footer .footer-middle-side,
+    .second-page-footer .footer-right-side{
+        padding-left:10px;
+        width:100%;
     }
 }
