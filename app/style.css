@@ -5,7 +5,10 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.ttf') format('truetype');
+}
 [class^="icon-"], [class*=" icon-"] {
     font-family: 'iconFont';
     speak: none;
@@ -50,6 +53,7 @@
 
 /*--- MAIN CLASSES ---*/
 body{
+    font-family: 'OpenSans';
     background-color: #999999;
 }
 a{
@@ -82,9 +86,9 @@ a{
 /*--- HEADER ---*/
 .page-header-block{
     position:relative;
-    background: url(../images/header.png) no-repeat;
+    background: url(../images/header.jpg) no-repeat;
     background-size: cover;
-    height:434px;
+    height:643px;
 }
 .page-header-block .header-button-block{
     position:absolute;
@@ -381,9 +385,6 @@ a{
     width:20%;
 }
 /*--- HEADER ---*/
-.second-page{
-
-}
 .second-page-header{
     position: relative;
     padding:20px;
@@ -570,7 +571,11 @@ a{
     .page-header-block{
         height:320px;
     }
-    /*--- CONTENT FIRST BLOCK ---*/
+    .page-header-block .header-button-block{
+        top:10px;
+        bottom:10px;
+    }
+        /*--- CONTENT FIRST BLOCK ---*/
     .content .first .left-side img{
         margin-top:0;
     }
