@@ -99,9 +99,9 @@ a{
     font-size:23px;
     text-decoration: none;
     color:white;
-    border:2px solid white;
+    border:2px solid #00A9EC;
     padding:10px 20px;
-    background-color: black;
+    background-color: #00A9EC;
 }
 .page-header-block .header-button-block .header-price{
     padding-bottom: 10px;
@@ -161,7 +161,7 @@ a{
     padding-left:20px;
 }
 .content-form .form-button{
-    padding-top: 100px;
+    padding-top: 0;
     text-align: center;
     width: 50%;
     float:left;
@@ -175,7 +175,7 @@ a{
     border-color:#00B1E6;
 }
 .content-form .form-description{
-    padding-top: 100px;
+    padding-top:6px;
     text-align: left;
     padding-left: 20px;
     width: 50%;
@@ -190,7 +190,11 @@ a{
     font-size:8px;
     font-weight: 700;
 }
-
+.content-form hr{
+    width:90%;
+    margin:20px auto;
+    border-color:grey;
+}
 
 /*--- CONTENT FOURTH (4TH) BLOCK ---*/
 .content .gallery-block{
@@ -319,10 +323,6 @@ a{
 
 @media screen and (max-width: 1200px){
     /*--- CONTENT ---*/
-    .content-form .form-button,
-    .content-form .form-description{
-        padding-top:30px;
-    }
     /*--- CONTENT FIRST BLOCK ---*/
     .content .first .left-side img{
         margin-top:30px;
@@ -537,10 +537,7 @@ a{
 }
 @media screen and (max-width: 992px){
     /*--- CONTENT ---*/
-    .content-form .form-button,
-    .content-form .form-description{
-        padding-top:20px;
-    }
+
     /*--- CONTENT FIRST BLOCK ---*/
     .content .first .left-side img{
         margin-top:100px;
@@ -582,9 +579,12 @@ a{
     /*--- CONTENT SECOND BLOCK ---*/
     .content-form .form-button,
     .content-form .form-description{
-        width: auto;
+        width: 50%;
         float:left;
         text-align: right;
+    }
+    .content-form .form-description{
+        text-align: left;
     }
     /*--- CONTENT THIRD BLOCK ---*/
     .content .third .left-side img{
