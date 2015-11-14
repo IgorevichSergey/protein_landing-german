@@ -273,8 +273,8 @@ a{
     margin-left:10px;
     margin-bottom:10px;
 }
-.footer-block .footer-left-side-block form input[type=number]{
-    padding:5px 10px;
+.footer-block .footer-left-side-block form select{
+    padding:5px 30px 6px 10px;
 }
 .footer-block .footer-left-side-block form input[type=submit]{
     margin-left:-5px;
@@ -336,7 +336,7 @@ a{
         margin-top:60px;
     }
     /*--- FOOTER ---*/
-    .footer-block .footer-left-side-block form input[type=number]{
+    .footer-block .footer-left-side-block form select{
         margin: -5px;
         margin-top:20px;
         width:100%;
@@ -429,9 +429,11 @@ a{
 .second-page-content .form-line{
     padding:5px 0;
 }
-.second-page-content input[type=text]{
+.second-page-content input[type=text],
+.second-page-content select{
     border:1px solid #CDCDCD;
     padding:2px 5px;
+    width: 189px;
 }
 .second-page-content .submit-block .summ,
 .second-page-content .submit-block .amount{
@@ -595,7 +597,7 @@ a{
         margin-top:0;
     }
     /*--- FOOTER ---*/
-    .footer-block .footer-left-side-block form input[type=number]{
+    .footer-block .footer-left-side-block form select{
         margin: 0;
         width:auto;
     }
@@ -642,7 +644,7 @@ a{
     }
 }
 @media screen and (max-width: 420px){
-    .footer-block .footer-left-side-block form input[type=number]{
+    .footer-block .footer-left-side-block form select{
         margin: -5px;
         margin-top:20px;
         width:100%;

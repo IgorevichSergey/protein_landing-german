@@ -15,115 +15,134 @@
     </div>
     <div class="second-page-content">
         <h2>View Cart</h2>
-        <div class="grey-block">
-            <div class="second-page-left-side block-description">T-REX150</div>
-            <div class="second-page-right-side right-text-align">&#8364 26.99 <span class="close-button">x</span></div>
-            <div class="float-cleaner"></div>
-            <div class="second-page-left-side">Menge: 1</div>
-            <div class="float-cleaner"></div>
-            <div class="second-page-left-side">Testosteron Booster</div>
-            <div class="float-cleaner"></div>
-            <div class="second-page-left-side"><strong>Versandkosten</strong> | Lieferzeit ca. 2 Werktage</div>
-            <div class="second-page-right-side right-text-align">&#8364 3.90 <span class="close-button">x</span></div>
-            <div class="float-cleaner"></div>
-        </div>
-        <br>
-        <div class="grey-block">
-            <div class="first-form">
-                <div class="form-line">
-                    <span class="form-description">Gutscheincode:</span>
+        <form name="buy">
+            <div class="grey-block">
+                <div class="second-page-left-side block-description">T-REX150</div>
+                <div class="second-page-right-side right-text-align">&#8364 26.99 <span class="close-button">x</span></div>
+                <div class="float-cleaner"></div>
+                <div class="second-page-left-side">Menge:
+                    <select style="width:auto;" onchange="_setItemValue(this.value)" name="quantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+                <div class="float-cleaner"></div>
+                <div class="second-page-left-side">Testosteron Booster</div>
+                <div class="float-cleaner"></div>
+                <div class="second-page-left-side"><strong>Versandkosten</strong> | Lieferzeit ca. 2 Werktage</div>
+                <div class="second-page-right-side right-text-align">&#8364 <span id="shiping_cost"></span> <span class="close-button">x</span></div>
+                <div class="float-cleaner"></div>
+            </div>
+            <br>
+            <div class="grey-block">
+                <div class="first-form">
+                    <div class="form-line">
+                        <span class="form-description">Gutscheincode:</span>
                     <span class="form-input">
                         <input type="text" />
                         <input type="button" value="Einlösen"/>
                     </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <br>
-        <div class="second-form">
-            <div class="form-line">
-                <span class="form-description">Land:</span>
-                <span class="form-input">
-                    <input type="text" />
-                </span>
-            </div>
-
-            <div class="form-line">
-                <span class="form-description">Vorname:</span>
-                <span class="form-input">
-                    <input type="text" />
-                </span>
-            </div>
-
-            <div class="form-line">
-                <span class="form-description">Nachname:</span>
-                <span class="form-input">
-                    <input type="text" />
-                </span>
-            </div>
-
-            <div class="form-line">
-                <span class="form-description">Email:</span>
-                <span class="form-input">
-                    <input type="text" />
-                </span>
-            </div>
-
-            <div class="form-line">
-                <span class="form-description">Adresse:</span>
-                <span class="form-input">
-                    <input type="text" />
-                </span>
-            </div>
-
-            <div class="form-line">
-                <span class="form-description">Stadt:</span>
-                <span class="form-input">
-                    <input type="text" />
-                </span>
-            </div>
-
-            <div class="form-line">
-                <span class="form-description">Postleitzahl:</span>
-                <span class="form-input">
-                    <input type="text" />
-                </span>
-            </div>
-        </div>
-        <br>
-        <div class="grey-block">
-            <div class="first-form">
+            <br>
+            <div class="second-form">
                 <div class="form-line">
-                    <span class="form-description">PayPal:</span>
-                    <span class="form-input">
-                        <input type="radio" name="payType"/>
-                    </span>
+                    <span class="form-description">Land:</span>
+                <span class="form-input">
+                    <select name="land">
+                        <option>Österreich</option>
+                        <option>Deutschland</option>
+                    </select>
+                </span>
                 </div>
 
                 <div class="form-line">
-                    <span class="form-description">Sofortüberweisung:</span>
-                    <span class="form-input">
-                        <input type="radio" name="payType"/>
-                    </span>
+                    <span class="form-description">Vorname:</span>
+                <span class="form-input">
+                    <input type="text" />
+                </span>
                 </div>
 
                 <div class="form-line">
-                    <span class="form-description">Vorkasse:</span>
+                    <span class="form-description">Nachname:</span>
+                <span class="form-input">
+                    <input type="text" />
+                </span>
+                </div>
+
+                <div class="form-line">
+                    <span class="form-description">Email:</span>
+                <span class="form-input">
+                    <input type="text" />
+                </span>
+                </div>
+
+                <div class="form-line">
+                    <span class="form-description">Adresse:</span>
+                <span class="form-input">
+                    <input type="text" />
+                </span>
+                </div>
+
+                <div class="form-line">
+                    <span class="form-description">Stadt:</span>
+                <span class="form-input">
+                    <input type="text" />
+                </span>
+                </div>
+
+                <div class="form-line">
+                    <span class="form-description">Postleitzahl:</span>
+                <span class="form-input">
+                    <input type="text" />
+                </span>
+                </div>
+            </div>
+            <br>
+            <div class="grey-block">
+                <div class="first-form">
+                    <div class="form-line">
+                        <span class="form-description">PayPal:</span>
                     <span class="form-input">
                         <input type="radio" name="payType"/>
                     </span>
-                </div>
+                    </div>
 
+                    <div class="form-line">
+                        <span class="form-description">Sofortüberweisung:</span>
+                    <span class="form-input">
+                        <input type="radio" name="payType"/>
+                    </span>
+                    </div>
+
+                    <div class="form-line">
+                        <span class="form-description">Vorkasse:</span>
+                    <span class="form-input">
+                        <input type="radio" name="payType"/>
+                    </span>
+                    </div>
+
+                </div>
             </div>
-        </div>
-        <br>
-        <div class="second-page-right-side right-text-align submit-block">
-            <span class="summ">Summe:</span>
-            <span class="amount">&#8364 30.89</span>
-            <input type="submit" value="KAUFEN"/>
-            <div class="submit-description"> <span class="icon-shield"></span> Kauf ohne Risiko - 30 Tage Zufriedenheitsgarantie!</div>
-        </div>
-        <div class="float-cleaner"></div>
+            <br>
+            <div class="second-page-right-side right-text-align submit-block">
+                <span class="summ">Summe:</span>
+                <span class="amount">&#8364 30.89</span>
+                <input type="submit" value="KAUFEN"/>
+                <div class="submit-description"> <span class="icon-shield"></span> Kauf ohne Risiko - 30 Tage Zufriedenheitsgarantie!</div>
+            </div>
+            <div class="float-cleaner"></div>
+        </form>
+
     </div>
     <div class="second-page-footer">
         <div class="footer-left-side">
@@ -165,5 +184,8 @@
     </div>
 </div>
 <script type="text/javascript" src="js/bower-components.min.js"></script>
+<script type="text/javascript">
+
+</script>
 </body>
 </html>
