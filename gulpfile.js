@@ -4,8 +4,12 @@ var concat = require('gulp-concat');
 var cssconcat = require('gulp-concat-css');
 var runSequence = require('run-sequence');
 var uncss = require('gulp-uncss');
+var minifyCss = require('gulp-minify-css');
 
 var config = {
+    SCRIPTS:[
+        "./app/*.js"
+    ],
     BOWER_SCRIPTS: [
         "./bower_components/jquery/dist/jquery.min.js",
         "./bower_components/bootstrap/dist/js/bootstrap.min.js"
@@ -21,6 +25,7 @@ var config = {
 gulp.task('bower_css_min', function () {
     gulp.src(config.BOWER_CSS)
         .pipe(cssconcat('bower.css'))
+        .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('./production/css'));
 });
 
@@ -28,9 +33,9 @@ gulp.task('bower_css_min', function () {
 gulp.task('css_min', function () {
     gulp.src(config.CSS)
         .pipe(cssconcat('app.css'))
+        .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('./production/css'));
 });
-
 gulp.task('copy_html', function(){
     gulp.src('./app/**/*.html')
         .pipe(gulp.dest('./production'))
@@ -41,6 +46,11 @@ gulp.task('bower_scripts_min',function () {
         .pipe(concat('bower-components.min.js'))
         .pipe(gulp.dest('./production/js'))
 });
+gulp.task('scripts_min',function () {
+    gulp.src(config.SCRIPTS)
+        .pipe(concat('app.js'))
+        .pipe(gulp.dest('./production/js'))
+});
 gulp.task('copy_other', function () {
     gulp.src('./fonts/**')
         .pipe(gulp.dest('./production/fonts'));
@@ -49,7 +59,7 @@ gulp.task('copy_other', function () {
 });
 
 gulp.task('build', function(){
-    runSequence('bower_css_min', 'css_min', 'bower_scripts_min', 'copy_other', 'copy_html',function() {
+    runSequence('bower_css_min', 'css_min', 'bower_scripts_min', 'scripts_min', 'copy_other', 'copy_html',function() {
     });
 
 });
@@ -57,6 +67,7 @@ gulp.task('build', function(){
 gulp.task('watch', function () {
     gulp.watch([
         './app/*.html',
+        './app/*.js',
         './app/style.css'
     ], ['build']);
 });

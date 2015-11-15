@@ -9,6 +9,10 @@
     font-family: 'OpenSans';
     src: url('../fonts/OpenSans.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+}
 [class^="icon-"], [class*=" icon-"] {
     font-family: 'iconFont';
     speak: none;
@@ -29,6 +33,7 @@
 .icon-shield:before {
     content: "\e901";
     color:#009F45;
+    font-size:18px;
 }
 .icon-message:before {
     content: "\e902";
@@ -53,7 +58,7 @@
 
 /*--- MAIN CLASSES ---*/
 body{
-    font-family: 'OpenSans';
+    font-family: 'OpenSansLight';
     background-color: #999999;
 }
 a{
@@ -105,15 +110,47 @@ a{
 }
 .page-header-block .header-button-block .header-price{
     padding-bottom: 10px;
-    color: white;
+    color: #fff;
     font-size: 50px;
-    font-weight:bold;
+    font-family: OpenSans;
+    font-weight: bolder;
 }
 .page-header-block .header-button-block .header-description{
     padding-top: 10px;
     font-size: 10px;
     color:white;
 }
+.page-header-block .header-description-block{
+    position:absolute;
+    top:10px;
+    left:20px;
+    /*width:360px;*/
+}
+.page-header-block h1{
+    font-size: 50px;
+    font-family: "OpenSansLight";
+    font-weight: 300;
+    color: white;
+}
+.page-header-block .blue-color{
+    color:#00B1E3;
+    font-family: "OpenSansLight";
+    /*font-weight: 700;*/
+    margin-bottom:30px;
+}
+.page-header-block .bold-style{
+    color:white;
+    font-family: "OpenSans";
+    font-weight:bolder;
+    font-size: 15px;
+    line-height: 1.6em;
+    width:90%;
+
+}
+.page-header-block .bold-style div{
+    white-space: nowrap;
+}
+
 /*--- SUB-HEADER CLASS ---*/
 .sub-header-block{
     background-color: black;
@@ -125,14 +162,22 @@ a{
 }
 .sub-header-element h4{
     margin-bottom: 0;
-    color: #008197;
+    font-size: 25px;
+    color: #00b1e3;
+    font-family: "OpenSans";
+    font-weight: bolder;
 }
 .sub-header-element p{
-    color: #77807A;
+    color: #a5a5a5;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 0;
 }
 /*--- MAIN CONTENT ---*/
-.content h3{
-    color: #36393E;
+.content .block-name{
+    font-family: "OpenSansLight";
+    font-size: 42px;
+    font-weight: 300;
     text-align: center;
 }
 .content h4{
@@ -153,7 +198,10 @@ a{
     width: 100%;
 }
 /*--- CONTENT FIRST BLOCK ---*/
-
+.first .right-side h4{
+    margin-bottom:30px;
+    margin-top:30px;
+}
 
 
 /*--- CONTENT SECOND BLOCK ---*/
@@ -398,8 +446,16 @@ a{
     float:left;
 }
 .second-page-header .blue-color{
-    color:#005F87;
-    font-weight: 500;
+    font-family: "OpenSansLight";
+    color:#00B1E3;
+    font-weight: 400;
+}
+.second-page-header .phone{
+    margin-left:30px;
+    white-space: nowrap;
+}
+.second-page-header .phone img{
+    margin-bottom:5px;
 }
 /*--- CONTENT ---*/
 .second-page-content{
@@ -568,11 +624,18 @@ a{
 @media screen and (max-width: 768px){
     /*--- HEADER ---*/
     .page-header-block{
-        height:320px;
+        height:420px;
     }
     .page-header-block .header-button-block{
-        top:10px;
-        bottom:10px;
+        /*top:10px;*/
+        /*bottom:10px;*/
+        /*bottom:10px;*/
+    }
+    .content .block-name{
+        font-family: "OpenSansLight";
+        font-size: 35px;
+        font-weight: 300;
+        text-align: center;
     }
         /*--- CONTENT FIRST BLOCK ---*/
     .content .first .left-side img{
@@ -641,6 +704,9 @@ a{
     .second-page-footer .footer-right-side{
         padding-bottom:10px;
         width:70%;
+    }
+    .page-header-block .bold-style div{
+        white-space: normal;
     }
 }
 @media screen and (max-width: 420px){

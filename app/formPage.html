@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.01, user-scalable=0">
-    <title>Newsletter</title>
+    <title>T-REX 150</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
     <link rel="stylesheet" href="css/bower.css" />
     <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
 <div class="container second-page">
     <div class="second-page-header">
-        <span class="second-page-header-logo"><img style="margin-top:-13px;" src="images/logo.png"/></span>
-        <span class="blue-color">KONSTENLOSER VERSAND</span> ab &#8364 50 in Österreich und Deutschland
+        <a href="http://www.t-rex150.com" class="second-page-header-logo hidden-xs"><img style="margin-top:-13px;" src="images/logo.png"/></a>
+        <span class="blue-color">KONSTENLOSER VERSAND</span> ab &#8364 50 in Österreich und Deutschland <span class="phone"><img src="images/phone.png"/>+43 660 475 43 13</span>
     </div>
     <div class="second-page-content">
-        <h2>View Cart</h2>
+        <h2>Bestellübersicht</h2>
         <form name="buy">
             <div class="grey-block">
                 <div class="second-page-left-side block-description">T-REX150</div>
-                <div class="second-page-right-side right-text-align">&#8364 26.99 <span class="close-button">x</span></div>
+                <div class="second-page-right-side right-text-align">&#8364 <span id="result_product_price"></span><span class="close-button"></span></div>
                 <div class="float-cleaner"></div>
                 <div class="second-page-left-side">Menge:
-                    <select style="width:auto;" onchange="_setItemValue(this.value)" name="quantity">
+                    <select id="product_quality" style="width:auto;" onchange="setItemValue()" name="quantity">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -38,7 +39,7 @@
                 <div class="second-page-left-side">Testosteron Booster</div>
                 <div class="float-cleaner"></div>
                 <div class="second-page-left-side"><strong>Versandkosten</strong> | Lieferzeit ca. 2 Werktage</div>
-                <div class="second-page-right-side right-text-align">&#8364 <span id="shiping_cost"></span> <span class="close-button">x</span></div>
+                <div class="second-page-right-side right-text-align">&#8364 <span id="shipping_cost"></span> <span class="close-button"></span></div>
                 <div class="float-cleaner"></div>
             </div>
             <br>
@@ -58,7 +59,7 @@
                 <div class="form-line">
                     <span class="form-description">Land:</span>
                 <span class="form-input">
-                    <select name="land">
+                    <select id="city_name" onchange="setShippingPrice()" name="land">
                         <option>Österreich</option>
                         <option>Deutschland</option>
                     </select>
@@ -113,7 +114,7 @@
                     <div class="form-line">
                         <span class="form-description">PayPal:</span>
                     <span class="form-input">
-                        <input type="radio" name="payType"/>
+                        <input type="radio" checked name="payType"/>
                     </span>
                     </div>
 
@@ -136,7 +137,7 @@
             <br>
             <div class="second-page-right-side right-text-align submit-block">
                 <span class="summ">Summe:</span>
-                <span class="amount">&#8364 30.89</span>
+                <span class="amount">&#8364 <span id="result_amount"></span></span>
                 <input type="submit" value="KAUFEN"/>
                 <div class="submit-description"> <span class="icon-shield"></span> Kauf ohne Risiko - 30 Tage Zufriedenheitsgarantie!</div>
             </div>
@@ -147,7 +148,7 @@
     <div class="second-page-footer">
         <div class="footer-left-side">
             <p>
-                Mehr Energie. Mehr Antrieb. Mehr Lebensfreunde. Fahre jetzt deinen Testosteronspiegel hoch. Auf natürliche Art und Weise. In wenigen Minuten. Ohne Tabletten. Ohne Nebenwirkungen.
+                Mehr Energie. Mehr Antrieb. Mehr Lebensfreunde. Fahre jetzt deinen Testosteronspiegel hoch. Auf natürliche Art und Weise. In wenigen Minuten.<br class="hidden-xs"> Ohne Tabletten. Ohne Nebenwirkungen.
             </p>
         </div>
         <div class="footer-middle-side">
@@ -184,8 +185,6 @@
     </div>
 </div>
 <script type="text/javascript" src="js/bower-components.min.js"></script>
-<script type="text/javascript">
-
-</script>
+<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
