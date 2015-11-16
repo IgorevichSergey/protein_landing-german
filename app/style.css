@@ -91,13 +91,13 @@ a{
 /*--- HEADER ---*/
 .page-header-block{
     position:relative;
-    background: url(../images/header.jpg) no-repeat;
+    background: url(../images/trex150.jpg) no-repeat;
     background-size: cover;
-    height:643px;
+    height:776px;
 }
 .page-header-block .header-button-block{
     position:absolute;
-    bottom:50px;
+    bottom:30px;
     left:50px;
 }
 .page-header-block .header-button-block a{
@@ -111,7 +111,7 @@ a{
 .page-header-block .header-button-block .header-price{
     padding-bottom: 10px;
     color: #fff;
-    font-size: 50px;
+    font-size: 44px;
     font-family: OpenSans;
     font-weight: bolder;
 }
@@ -320,9 +320,11 @@ a{
 .footer-block .footer-left-side-block form{
     margin-left:10px;
     margin-bottom:10px;
+    margin-right:10px;
 }
 .footer-block .footer-left-side-block form select{
-    padding:5px 30px 6px 10px;
+    padding:7px 30px 7px 10px;
+    width:50%;
 }
 .footer-block .footer-left-side-block form input[type=submit]{
     margin-left:-5px;
@@ -331,6 +333,7 @@ a{
     font-weight:700;
     border-color:black;
     background-color: black;
+    width:50%;
 }
 .footer-block .images-row{
     padding-top:10px;
@@ -386,7 +389,7 @@ a{
     /*--- FOOTER ---*/
     .footer-block .footer-left-side-block form select{
         margin: -5px;
-        margin-top:20px;
+        margin-top:5px;
         width:100%;
     }
     .footer-block .footer-left-side-block form input[type=submit]{
@@ -624,7 +627,10 @@ a{
 @media screen and (max-width: 768px){
     /*--- HEADER ---*/
     .page-header-block{
-        height:420px;
+        background-size: inherit;
+        height: 717px;
+        background-position-y: 88%;
+        background-position-x: 3%;
     }
     .page-header-block .header-button-block{
         /*top:10px;*/
@@ -662,11 +668,11 @@ a{
     /*--- FOOTER ---*/
     .footer-block .footer-left-side-block form select{
         margin: 0;
-        width:auto;
+        width:50%;
     }
     .footer-block .footer-left-side-block form input[type=submit]{
         margin-top:0;
-        width: auto;
+        width: 50%;
     }
     .content .gallery-block{
         margin:10px auto;
