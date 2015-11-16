@@ -323,7 +323,8 @@ a{
     margin-right:10px;
 }
 .footer-block .footer-left-side-block form select{
-    padding:7px 30px 7px 10px;
+    padding:5px 30px 6px 10px;
+    height: 34px;
     width:50%;
 }
 .footer-block .footer-left-side-block form input[type=submit]{
@@ -334,6 +335,7 @@ a{
     border-color:black;
     background-color: black;
     width:50%;
+    height: 34px;
 }
 .footer-block .images-row{
     padding-top:10px;
